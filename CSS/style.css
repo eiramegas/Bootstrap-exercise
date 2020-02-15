@@ -28,9 +28,8 @@ header h1, h2 {
 }
 
 .site-footer {
-    background-image: linear-gradient(#CEC8FF, white);
+    background-color: rgb(39,29,62,.9);
     padding: 20px 0;
-    
 }
 
 .jumbotron {
@@ -89,4 +88,13 @@ header h1, h2 {
     background-color: rgba(209, 197, 164, 0.596);
     border-radius: 30%;
 }
-   
+.card-header{
+    Background-color: #BF6B00;
+}
+.btn-link, h5, a {
+    color: white;
+}
+div.row-content { 
+    border-bottom: 1px solid grey;
+    border-top: 0px;
+  }
