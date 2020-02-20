@@ -1,23 +1,36 @@
 {
   "name": "2-bootstrap",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "This is a campsite for fictional campsites review site NucCamp",
   "main": "index.html",
   "scripts": {
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
     "lite": "lite-server",
-    "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "imagemin": "imagemin img/* -o dist/img"
   },
   "author": "Sage LeGault",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "imagemin-cli": "^3.0.0",
+    "lite-server": "^2.3.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.1",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
+    "imagemin": "^7.0.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "usemin": "^0.5.0"
   }
 }
