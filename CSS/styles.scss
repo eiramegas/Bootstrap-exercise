@@ -6,6 +6,7 @@ $color-accent2: #0F3F21;
 $color-light: rgba(209, 197, 164);
 $color-dark: rgb(100, 100, 100);
 $color-transparent-black: rgba(0, 0, 0);
+$color-teal: #17A2B8;
 
 body {
 	font-family: "Open Sans", sans-serif;
@@ -103,4 +104,21 @@ div {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+#reserveModal{
+	.modal-header{
+		background-color: $color-teal;
+		h3{
+			color:white;
+		}
+
+	}
+}
+#loginModal{
+	.modal-header{
+		background-color: $color-accent2;
+		h3{
+			color:white;
+		}
+	}
 }

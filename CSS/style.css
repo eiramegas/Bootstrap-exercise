@@ -107,3 +107,17 @@ div.row-content {
 	right: 0;
 	bottom: 0;
 }
+#reserveModal .modal-header{
+	background-color: #17A2B8;
+	
+}
+#reserveModal .modal-header h2, h3{
+	color:white;
+} 
+#loginModal .modal-header{
+	background-color: #BF6B00;
+	
+}
+#loginModal .modal-header h2, h3{
+	color:white;
+}

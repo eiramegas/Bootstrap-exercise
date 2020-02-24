@@ -2,9 +2,7 @@
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
-
-
-      $(function() {
+$(function() {
     $(".carousel").carousel( { interval: 2000 } );
     $("#carouselButton").click(function(){
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
@@ -16,5 +14,18 @@ $(function () {
             $("#carouselButton").children("i").removeClass("fa-play");
             $("#carouselButton").children("i").addClass("fa-pause"); 
         }
-    });
-});
+    }
+    )
+})
+$(function () {
+    $('#reserveButton').click(function(){
+        $('#reserveModal').modal('toggle')
+    }
+)
+})
+$(function () {
+    $('#loginButton').click(function(){
+        $('#loginModal').modal('toggle')
+    }
+)
+})
